@@ -120,14 +120,14 @@ class TokenizerBase(ABC):
         raise NotImplementedError()
 
     @abstractmethod
-    def decode(self, ids: list[int] | int, skip_special_tokens: bool = True) -> str:
+    def decode(self, ids: list[int] | int, skip_special_tokens: bool = False) -> str:
         raise NotImplementedError()
 
     @abstractmethod
     def convert_ids_to_tokens(
         self,
         ids: list[int],
-        skip_special_tokens: bool = True,
+        skip_special_tokens: bool = False,
     ) -> list[str]:
         raise NotImplementedError()
 

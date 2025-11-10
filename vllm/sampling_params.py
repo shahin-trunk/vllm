@@ -207,7 +207,7 @@ class SamplingParams(
     # not support returning only a list of token IDs.
     detokenize: bool = True
     """Whether to detokenize the output."""
-    skip_special_tokens: bool = True
+    skip_special_tokens: bool = False
     """Whether to skip special tokens in the output."""
     spaces_between_special_tokens: bool = True
     """Whether to add spaces between special tokens in the output."""
@@ -274,7 +274,7 @@ class SamplingParams(
         logprobs: int | None = None,
         prompt_logprobs: int | None = None,
         detokenize: bool = True,
-        skip_special_tokens: bool = True,
+        skip_special_tokens: bool = False,
         spaces_between_special_tokens: bool = True,
         logits_processors: list[LogitsProcessor] | None = None,
         truncate_prompt_tokens: Annotated[int, msgspec.Meta(ge=-1)] | None = None,
